@@ -13,7 +13,7 @@ importers:
       '@nuxtjs/eslint-config-typescript': ^9.0.0
       '@rollup/plugin-alias': ^3.1.9
       '@rollup/plugin-commonjs': ^21.0.3
-      '@rollup/plugin-inject': ^4.0.4
+      '@rollup/plugin-inject': ^5.0.3
       '@rollup/plugin-json': ^4.1.0
       '@rollup/plugin-node-resolve': ^13.2.0
       '@rollup/plugin-replace': ^4.0.0
@@ -100,7 +100,7 @@ importers:
       '@nuxt/devalue': 2.0.0
       '@rollup/plugin-alias': 3.1.9_rollup@2.70.1
       '@rollup/plugin-commonjs': 21.0.3_rollup@2.70.1
-      '@rollup/plugin-inject': 4.0.4_rollup@2.70.1
+      '@rollup/plugin-inject': 5.0.3_rollup@2.70.1
       '@rollup/plugin-json': 4.1.0_rollup@2.70.1
       '@rollup/plugin-node-resolve': 13.2.0_rollup@2.70.1
       '@rollup/plugin-replace': 4.0.0_rollup@2.70.1
@@ -623,15 +623,14 @@ packages:
     engines: {node: '>=6.0.0'}
     dev: true
 
-  /@jridgewell/sourcemap-codec/1.4.11:
-    resolution: {integrity: sha512-Fg32GrJo61m+VqYSdRSjRXMjQ06j8YIYfcTqndLYVAaHmroZHLJZCydsWBOTDqXS2v+mjxohBWEMfg97GXmYQg==}
-    dev: true
+  /@jridgewell/sourcemap-codec/1.4.14:
+    resolution: {integrity: sha512-XPSJHWmi394fuUuzDnGz1wiKqWfo1yXecHQMRf2l6hztTO+nPru658AyDngaBe7isIxEkRsPR3FZh+s7iVa4Uw==}
 
   /@jridgewell/trace-mapping/0.3.4:
     resolution: {integrity: sha512-vFv9ttIedivx0ux3QSjhgtCVjPZd5l46ZOMDSCwnH1yUO2e964gO8LZGyv2QkqcgR6TnBU1v+1IFqmeoG+0UJQ==}
     dependencies:
       '@jridgewell/resolve-uri': 3.0.5
-      '@jridgewell/sourcemap-codec': 1.4.11
+      '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
   /@mapbox/node-pre-gyp/1.0.9:
@@ -886,14 +885,18 @@ packages:
       resolve: 1.22.0
       rollup: 2.70.1
 
-  /@rollup/plugin-inject/4.0.4_rollup@2.70.1:
-    resolution: {integrity: sha512-4pbcU4J/nS+zuHk+c+OL3WtmEQhqxlZ9uqfjQMQDOHOPld7PsCd8k5LWs8h5wjwJN7MgnAn768F2sDxEP4eNFQ==}
+  /@rollup/plugin-inject/5.0.3_rollup@2.70.1:
+    resolution: {integrity: sha512-411QlbL+z2yXpRWFXSmw/teQRMkXcAAC8aYTemc15gwJRpvEVDQwoe+N/HTFD8RFG8+88Bme9DK2V9CVm7hJdA==}
+    engines: {node: '>=14.0.0'}
     peerDependencies:
-      rollup: ^1.20.0 || ^2.0.0
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
     dependencies:
-      '@rollup/pluginutils': 3.1.0_rollup@2.70.1
+      '@rollup/pluginutils': 5.0.2_rollup@2.70.1
       estree-walker: 2.0.2
-      magic-string: 0.25.9
+      magic-string: 0.27.0
       rollup: 2.70.1
     dev: false
 
@@ -964,6 +967,21 @@ packages:
       estree-walker: 2.0.2
       picomatch: 2.3.1
 
+  /@rollup/pluginutils/5.0.2_rollup@2.70.1:
+    resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@types/estree': 1.0.0
+      estree-walker: 2.0.2
+      picomatch: 2.3.1
+      rollup: 2.70.1
+    dev: false
+
   /@samverschueren/stream-to-observable/0.3.1_rxjs@6.6.7:
     resolution: {integrity: sha512-c/qwwcHyafOQuVQJj0IlBjf5yYgBI7YPJ77k4fOJYesb41jio65eaJODRUmfYKhTOFBrIZ66kgvGPlNbjuoRdQ==}
     engines: {node: '>=6'}
@@ -999,6 +1017,10 @@ packages:
 
   /@types/estree/0.0.51:
     resolution: {integrity: sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==}
+
+  /@types/estree/1.0.0:
+    resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
+    dev: false
 
   /@types/etag/1.8.1:
     resolution: {integrity: sha512-bsKkeSqN7HYyYntFRAmzcwx/dKW4Wa+KVMTInANlI72PWLQmOpZu96j0OqHZGArW4VQwCmJPteQlXaUDeOB0WQ==}
@@ -4375,6 +4397,13 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       sourcemap-codec: 1.4.8
+
+  /magic-string/0.27.0:
+    resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.4.14
+    dev: false
 
   /make-dir/3.1.0:
     resolution: {integrity: sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw==}
