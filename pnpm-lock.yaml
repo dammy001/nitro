@@ -17,7 +17,7 @@ importers:
       '@rollup/plugin-json': ^4.1.0
       '@rollup/plugin-node-resolve': ^13.2.0
       '@rollup/plugin-replace': ^4.0.0
-      '@rollup/plugin-virtual': ^2.1.0
+      '@rollup/plugin-virtual': ^3.0.1
       '@rollup/plugin-wasm': ^5.1.2
       '@rollup/pluginutils': ^4.2.1
       '@types/aws-lambda': ^8.10.93
@@ -104,7 +104,7 @@ importers:
       '@rollup/plugin-json': 4.1.0_rollup@2.70.1
       '@rollup/plugin-node-resolve': 13.2.0_rollup@2.70.1
       '@rollup/plugin-replace': 4.0.0_rollup@2.70.1
-      '@rollup/plugin-virtual': 2.1.0_rollup@2.70.1
+      '@rollup/plugin-virtual': 3.0.1_rollup@2.70.1
       '@rollup/plugin-wasm': 5.1.2_rollup@2.70.1
       '@rollup/pluginutils': 4.2.1
       '@types/jsdom': 16.2.14
@@ -928,11 +928,14 @@ packages:
       magic-string: 0.25.9
       rollup: 2.70.1
 
-  /@rollup/plugin-virtual/2.1.0_rollup@2.70.1:
-    resolution: {integrity: sha512-CPPAtlKT53HFqC8jFHb/V5WErpU8Hrq2TyCR0A7kPQMlF2wNUf0o1xuAc+Qxj8NCZM0Z3Yvl+FbUXfJjVWqDwA==}
-    engines: {node: '>=8.0.0'}
+  /@rollup/plugin-virtual/3.0.1_rollup@2.70.1:
+    resolution: {integrity: sha512-fK8O0IL5+q+GrsMLuACVNk2x21g3yaw+sG2qn16SnUd3IlBsQyvWxLMGHmCmXRMecPjGRSZ/1LmZB4rjQm68og==}
+    engines: {node: '>=14.0.0'}
     peerDependencies:
-      rollup: ^1.20.0||^2.0.0
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
     dependencies:
       rollup: 2.70.1
     dev: false
